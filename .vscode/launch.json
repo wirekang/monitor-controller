@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "(Windows) Launch",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/debug/a.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "internalConsole",
+            "preLaunchTask": "build-debug"
+        },
+    ]
+}

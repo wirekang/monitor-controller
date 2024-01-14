@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "windows": {
+        "options": {
+            "shell": {
+                "executable": "cmd.exe",
+                "args": [
+                    "/C",
+                    "\"C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/Tools/VsDevCmd.bat\"",
+                    "&&",
+                ]
+            }
+        }
+    },
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "rc",
+            "command": "scripts\\rc.cmd",
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "build-debug",
+            "command": "scripts\\build.cmd",
+            "args": [
+                "debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "build-release",
+            "command": "scripts\\build.cmd",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+            }
+        }
+    ],
+}
